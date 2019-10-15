@@ -25,7 +25,7 @@
 
           <md-card-actions>
             <!-- bouton de redicrection vers le questionnaire 14/10/2019 -->
-            <router-link to="/questionnaire"><md-button>Commencer le questionnaire</md-button></router-link>
+            <router-link to="/questionnaire"><md-button class="md-raised md-primary">Commencer le questionnaire</md-button></router-link>
           </md-card-actions>
         </md-card>
       </div>

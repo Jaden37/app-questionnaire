@@ -6,11 +6,8 @@
       <!-- Utilisation  des mes components passage en paramètres des questions et réponses 14/10/2019-->
       <div class="md-layout-item">
         <!-- Envoie de l'objet question en fonction de l'index courant 15/10/2019 -->
-        <Question :JPquestion="Questions[index]" />
-        <router-link to="/questionnaire">
-          <!-- bouton utilisant la fonction nextQuestion 15/10/2019 -->
-          <md-button v-on:click="nextQuestion">Question suivante</md-button>
-        </router-link>
+        <!-- Ajout de la fonction l'émit du component 15/10/2019 -->
+        <Question :JPquestion="JPQuestions[index]" @responseToQuestionnaire="saveUserResponse"/>
       </div>
       <div class="md-layout-item"></div>
     </div>
@@ -24,20 +21,19 @@ export default {
   name: 'questionnaire',
   data: () => ({
     index: 0,
-    Questions: [
+    // Création de la liste des questions 15/10/2019
+    JPQuestions: [
       {
         name: 'Aimez vous les carottes ?',
         answers: ['Oh oui', 'Moyen', 'Pas du tout'],
-        response: {
-          1: true
-        }
+        correct_answers: [true, false, false],
+        user_answers: [false, false, false]
       },
       {
         name: '1 + 2 * 2 ?',
         answers: ['4', '5', 'Oh non pas des maths'],
-        response: {
-          5: true
-        }
+        correct_answers: [false, true, false],
+        user_answers: [false, false, false]
       }
     ]
   }),
@@ -46,13 +42,21 @@ export default {
     Question
   },
   methods: {
-    // fonction qui permet de passer à la question suivante en incrémentant l'index
-    nextQuestion: function (event) {
-      var length = Object.keys(this.Questions).length
+    // fonction qui permet de passer à la question suivante en incrémentant l'index 15/10/2019
+    nextQuestion: function () {
+      var length = Object.keys(this.JPQuestions).length
       if (this.index < length - 1) {
         this.index++
       } else {
         alert('Fin du questionnaire')
+      }
+    },
+    // fonction récupère les réponses saisies par l'utilisateur 15/10/2019
+    saveUserResponse: function (JPresponseUser) {
+      console.log('Data renvoyée')
+      if (JPresponseUser != null) {
+        console.log(JPresponseUser)
+        this.nextQuestion()
       }
     }
   }
