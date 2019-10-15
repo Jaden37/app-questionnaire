@@ -1,5 +1,16 @@
 # app-questionnaire
 
+Avancé du projet
+
+#14/10/2019
+__Objectifs début de séance:__ Initialisation du projet, création d'une view, formulaire utilisateur, changement de page entre formulaire et questionnaire
+__Etat d'avancement:__ Création du projet + formulaire de création de l'utilisateur + view questionnaire + liaison entre le component question et le questionnaire + intégration de VueMatérial
+                    les données sont stockées temporairement (pas de sauvegarde entre les pages)
+
+#15/10/2019
+__Objectifs début de séance:__ Commenter le code de la veille, utiliser le component avec un objets plutôt que des String, afficher les questions les une après les autres grâce à un système de tableau
+__Etat d'avancement__
+
 ## Project setup
 ```
 npm install
@@ -22,3 +33,4 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
