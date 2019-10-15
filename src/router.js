@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Home from './views/Home.vue'
+// import de ma view 14/10/2019
 import Questionnaire from './views/Questionnaire.vue'
 
 Vue.use(Router)
@@ -21,6 +22,7 @@ export default new Router({
       component: () => import(/* webpackChunkName: "about" */ './views/About.vue')
     },
     {
+      // définition de la route de ma view 14/10/2019
       path: '/questionnaire',
       name: 'questionnaire',
       component: Questionnaire
