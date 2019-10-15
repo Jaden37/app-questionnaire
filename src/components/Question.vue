@@ -30,11 +30,13 @@
 
 <script>
 export default {
+  // Toutes les cases sont par défaut décochées 14/10/2019
   data: () => ({
     JPbool1: false,
     JPbool2: false,
     JPbool3: false
   }),
+  // Properties qui seront données en paramètre lors de l'utilisation du component 14/10/2019
   props: {
     JPQuestion: String,
     JPresponse1: String,
