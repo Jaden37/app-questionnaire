@@ -17,32 +17,14 @@
 <script>
 // importation de mon component 14/10/2019
 import Question from '@/components/Question.vue'
+import json from '../json/questions.json'
 export default {
   name: 'questionnaire',
   data: () => ({
     JPpointsTotal: 0,
     index: 0,
     // Création de la liste des questions 15/10/2019
-    JPQuestions: [
-      {
-        name: 'Aimez vous les carottes ?',
-        answers: ['Oh oui', 'Moyen', 'Pas du tout'],
-        correct_answers: [true, false, false],
-        user_answers: [false, false, false]
-      },
-      {
-        name: '1 + 2 * 2 ?',
-        answers: ['4', '5', 'Oh non pas des maths'],
-        correct_answers: [false, true, false],
-        user_answers: [false, false, false]
-      },
-      {
-        name: 'Bests langages ?',
-        answers: ['C#', 'PHP', 'Ruby'],
-        correct_answers: [true, true, false],
-        user_answers: [false, false, false]
-      }
-    ]
+    JPQuestions: json
   }),
   // ajout de mon component dans la liste 14/10/2019
   components: {
