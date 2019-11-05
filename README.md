@@ -10,6 +10,10 @@ __Etat d'avancement:__ Création du projet + formulaire de création de l'utilis
 __Objectifs début de séance:__ Commenter le code de la veille, utiliser le component avec un objets plutôt que des String, afficher les questions les une après les autres grâce à un système de tableau <br>
 __Etat d'avancement:__ Automatisation de l'affichage des questions + utilisation d'objet lors de la création des components 'question' + retour des choix de l'utilisateur (emit)
 
+## 05/11/2019
+__Objectifs début de séance:__ Calcul des points sur le formulaire et affichage sur la page de résultat. Mise en place de la base de données du navigateur (Stockage de l'utilisateur et de ses résultats) <br>
+__Etat d'avancement:__ 
+
 ## Project setup
 ```
 npm install

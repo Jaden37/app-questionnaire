@@ -20,6 +20,7 @@ import Question from '@/components/Question.vue'
 export default {
   name: 'questionnaire',
   data: () => ({
+    JPpointsTotal: 0,
     index: 0,
     // Création de la liste des questions 15/10/2019
     JPQuestions: [
@@ -33,6 +34,12 @@ export default {
         name: '1 + 2 * 2 ?',
         answers: ['4', '5', 'Oh non pas des maths'],
         correct_answers: [false, true, false],
+        user_answers: [false, false, false]
+      },
+      {
+        name: 'Bests langages ?',
+        answers: ['C#', 'PHP', 'Ruby'],
+        correct_answers: [true, true, false],
         user_answers: [false, false, false]
       }
     ]
@@ -48,7 +55,9 @@ export default {
       if (this.index < length - 1) {
         this.index++
       } else {
-        alert('Fin du questionnaire')
+        console.log('Vous avez ' + this.JPpointsTotal + ' point(s)')
+        // Redirige vers la page de résultat à la fin du questionnaire 05/11/2019
+        this.$router.push({ name: 'result', query: { JPTotal: this.JPpointsTotal, JPnbrquestion: length } })
       }
     },
     // fonction récupère les réponses saisies par l'utilisateur 15/10/2019
@@ -56,6 +65,14 @@ export default {
       console.log('Data renvoyée')
       if (JPresponseUser != null) {
         console.log(JPresponseUser)
+        // Check si la réponse de l'utilisateur est correcte 05/11/2019
+        if (JSON.stringify(JPresponseUser) === JSON.stringify(this.JPQuestions[this.index].correct_answers)) {
+          console.log('Correct')
+          // Incrémente le nombre de point total 05/11/2019
+          this.JPpointsTotal++
+        } else {
+          console.log('False')
+        }
         this.nextQuestion()
       }
     }

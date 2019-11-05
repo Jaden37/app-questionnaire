@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import Home from './views/Home.vue'
 // import de ma view 14/10/2019
 import Questionnaire from './views/Questionnaire.vue'
+import Result from './views/Result.vue'
 
 Vue.use(Router)
 
@@ -26,6 +27,12 @@ export default new Router({
       path: '/questionnaire',
       name: 'questionnaire',
       component: Questionnaire
+    },
+    {
+      // définition de la route de ma view 05/11/2019
+      path: '/result',
+      name: 'result',
+      component: Result
     }
   ]
 })
