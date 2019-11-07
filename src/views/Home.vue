@@ -25,7 +25,7 @@
 
           <md-card-actions>
             <!-- bouton de redicrection vers le questionnaire 14/10/2019 -->
-            <router-link to="/questionnaire"><md-button class="md-raised md-primary">Commencer le questionnaire</md-button></router-link>
+            <router-link to="/questionnaire"><md-button v-on:click="addPerson" class="md-raised md-primary">Commencer le questionnaire</md-button></router-link>
           </md-card-actions>
         </md-card>
       </div>
@@ -44,7 +44,24 @@ export default {
     JPnom: null,
     JPprenom: null,
     JPsociete: null
-  })
+  }),
+  methods: {
+    // fonction qui permet d'ajout une personne à la base de données 07/11/2019
+    addPerson: function () {
+      var JPperson = {
+        _id: new Date().toISOString(),
+        JPfirstname: this.JPnom,
+        JPlastname: this.JPprenom,
+        JPsociety: this.JPsociete
+      }
+      console.log(JPperson)
+      this.$JPdb.put(JPperson, function callback (err, result) {
+        if (!err) {
+          console.log('Successfully posted a person')
+        }
+      })
+    }
+  }
 }
 
 </script>

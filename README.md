@@ -1,4 +1,5 @@
 # app-questionnaire
+__Liens vers le site :__ https://jaden37.github.io/#/
 
 ## Avancé du projet
 
@@ -12,7 +13,7 @@ __Etat d'avancement:__ Automatisation de l'affichage des questions + utilisation
 
 ## 05/11/2019
 __Objectifs début de séance:__ Calcul des points sur le formulaire et affichage sur la page de résultat. Mise en place de la base de données du navigateur (Stockage de l'utilisateur et de ses résultats) <br>
-__Etat d'avancement:__ 
+__Etat d'avancement:__  Calucl des points sur le formulaire. Affichage du résultat final de l'utilisateur sur une page séparée
 
 ## Project setup
 ```
