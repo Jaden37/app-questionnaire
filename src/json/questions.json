@@ -1,20 +1,23 @@
 [
     {
-      "name": "Aimez vous les carottes ?",
-      "answers": ["Oh oui", "Moyen", "Pas du tout"],
-      "correct_answers": [true, false, false],
-      "user_answers": [false, false, false]
+      "name": "Quel est le nom de famille d'Edward et Alphonse dans la série Fullmetal Alchemist ?",
+      "category" : "Anime & Manga Japonais",
+      "answers": ["Elric", "Ellis", "Eliek", "Elwood"],
+      "correct_answers": [true, false, false, false],
+      "user_answers": [false, false, false, false]
     },
     {
-      "name": "1 + 2 * 2 ?",
-      "answers": ["4", "5", "Oh non pas des maths"],
-      "correct_answers": [false, true, false],
-      "user_answers": [false, false, false]
+      "name": "Quel animal figure sur le logo d'Abarth, la division sport automobile de Fiat ?",
+      "category" : "Véhicules",
+      "answers": ["Taureau", "Cheval", "Scorpion", "Serpent"],
+      "correct_answers": [false, false, true, false],
+      "user_answers": [false, false, false, false]
     },
     {
-      "name": "Bests langages ?",
-      "answers": ["C#", "PHP", "Ruby"],
-      "correct_answers": [true, true, false],
-      "user_answers": [false, false, false]
+      "name": "Dans Pokemon Rouge & Bleu, quel est le nom de CS05 ?",
+      "category" : "Jeux Vidéos",
+      "answers": ["Coupe", "Force", "Flash", "Vol"],
+      "correct_answers": [false, false, true, false],
+      "user_answers": [false, false, false, false]
     }
 ]

@@ -52,7 +52,9 @@ export default {
         _id: new Date().toISOString(),
         JPfirstname: this.JPnom,
         JPlastname: this.JPprenom,
-        JPsociety: this.JPsociete
+        JPsociety: this.JPsociete,
+        JPlastHighScore: null,
+        JPlastPlayed: null
       }
       console.log(JPperson)
       this.$JPdb.put(JPperson, function callback (err, result) {
@@ -60,6 +62,9 @@ export default {
           console.log('Successfully posted a person')
         }
       })
+      // set du l'ID du nouveau user dans un cookie 10/11/2019
+      this.$cookies.set('id_user', JPperson._id, '1d')
+      console.log(this.$cookies.get('id_user'))
     }
   }
 }

@@ -2,8 +2,10 @@
   <div class="question">
     <md-card>
       <md-card-header>
+        Catégorie: {{JPquestion.category}}
         <!-- on récupère le titre passé dans l'objet 15/10/2019 -->
-        <div class="md-title">{{JPquestion.name}}</div>
+        <div class="md-title">{{JPquestion.name}}
+        </div>
       </md-card-header>
 
       <md-card-content>

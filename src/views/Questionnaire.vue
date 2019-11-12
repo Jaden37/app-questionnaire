@@ -2,9 +2,9 @@
   <!-- Création de mon question avec mes layout 14/10/2019-->
   <div class="questionnaire">
     <div class="md-layout">
-      <div class="md-layout-item"></div>
+      <div class="md-layout-item "></div>
       <!-- Utilisation  des mes components passage en paramètres des questions et réponses 14/10/2019-->
-      <div class="md-layout-item">
+      <div class="md-layout-item md-size-40">
         <!-- Envoie de l'objet question en fonction de l'index courant 15/10/2019 -->
         <!-- Ajout de la fonction l'émit du component 15/10/2019 -->
         <Question :JPquestion="JPQuestions[index]" @responseToQuestionnaire="saveUserResponse"/>
@@ -57,7 +57,25 @@ export default {
         }
         this.nextQuestion()
       }
+    },
+    // fonction qui mélange de manière aléatoire la liste des questions 12/11/2018
+    shuffleArray: function (array) {
+      var counter = array.length; var temp; var index
+      while (counter > 0) {
+        index = Math.floor(Math.random() * counter)
+
+        counter--
+
+        temp = array[ counter ]
+        array[ counter ] = array[ index ]
+        array[ index ] = temp
+      }
+      return array
     }
+  },
+  beforeMount () {
+    // mélange le tableau des questions avant son affichage 12/11/2019
+    this.shuffleArray(this.JPQuestions)
   }
 }
 </script>

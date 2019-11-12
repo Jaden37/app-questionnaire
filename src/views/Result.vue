@@ -42,6 +42,34 @@ export default {
   mounted () {
     this.JPTotal = this.$route.query.JPTotal
     this.JPnbrquestion = this.$route.query.JPnbrquestion
+  },
+  created () {
+    this.editScorePerson()
+  },
+  methods: {
+    editScorePerson: function () {
+      // récupère l'id du user qui est mis dans un cookie 12/11/2019
+      var JPpersonId = this.$cookies.get('id_user')
+      JPpersonId = '' + JPpersonId + ''
+      var that = this
+      this.$JPdb.get(JPpersonId).then(function (doc) {
+        // on set sont score et la date de sa dernière participation 12/11/2019
+        doc.JPlastHighScore = that.JPTotal
+        doc.JPlastPlayed = new Date()
+        // on est obligé de pout dans le get sinon il affiche une erreur "update conflict" due à _rev qui est identique 12/11/2019
+        // en faisant le put durant le get il modifie le _rev en le modifiant pour pouvoir éditer le doc 12/11/2019 
+        that.$JPdb.put(doc, function callback (err, result) {
+          if (!err) {
+            console.log('Successfully modified a person')
+            console.log(result)
+          } else {
+            console.log(err)
+          }
+        })
+      }).catch(function (err) {
+        console.log(err)
+      })
+    }
   }
 }
 
