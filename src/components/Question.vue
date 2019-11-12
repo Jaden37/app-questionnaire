@@ -2,6 +2,10 @@
   <div class="question">
     <md-card>
       <md-card-header>
+        <!-- affichage d'une image représentant la catégorie de la question 12/11/2019 -->
+        <md-card-media style="margin:auto">
+          <img :src="'img/category/' + JPquestion.category + '.png'" height="80" width="80" >
+        </md-card-media>
         Catégorie: {{JPquestion.category}}
         <!-- on récupère le titre passé dans l'objet 15/10/2019 -->
         <div class="md-title">{{JPquestion.name}}

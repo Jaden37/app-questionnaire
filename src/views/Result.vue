@@ -57,7 +57,7 @@ export default {
         doc.JPlastHighScore = that.JPTotal
         doc.JPlastPlayed = new Date()
         // on est obligé de pout dans le get sinon il affiche une erreur "update conflict" due à _rev qui est identique 12/11/2019
-        // en faisant le put durant le get il modifie le _rev en le modifiant pour pouvoir éditer le doc 12/11/2019 
+        // en faisant le put durant le get il modifie le _rev en le modifiant pour pouvoir éditer le doc 12/11/2019
         that.$JPdb.put(doc, function callback (err, result) {
           if (!err) {
             console.log('Successfully modified a person')

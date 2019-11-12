@@ -19,5 +19,54 @@
       "answers": ["Coupe", "Force", "Flash", "Vol"],
       "correct_answers": [false, false, true, false],
       "user_answers": [false, false, false, false]
+    },
+    {
+      "name": "Lequel de ces classiques de Disney est sorti en 1970 ?",
+      "category" : "Cinéma",
+      "answers": ["La petite sirène", "les Aristochats", "Les 101 dalmaciens", "Rox & Rouxy"],
+      "correct_answers": [false, true, false, false],
+      "user_answers": [false, false, false, false]
+    },
+    {
+      "name": "Quelle est la longueur d'une adresse IPv6 ?",
+      "category" : "Informatique",
+      "answers": ["64 bits", "64 bytes", "128 bits", "128 bytes"],
+      "correct_answers": [false, false, true, false],
+      "user_answers": [false, false, false, false]
+    },
+    {
+      "name": "Dans l'univers 'Jurassic Park', quel a été le premier dinosaure cloné par InGen en 1986 ?",
+      "category" : "Cinéma",
+      "answers": ["Triceratops", "Vélociraptor", "Troodon", "Brachiosaurus"],
+      "correct_answers": [false, false, true, false],
+      "user_answers": [false, false, false, false]
+    },
+    {
+      "name": "Lequel des constructeurs automobiles suivants a eu une guerre qui porte son nom ?",
+      "category" : "Véhicules",
+      "answers": ["Honda", "Ford", "Volkswagen", "Toyota"],
+      "correct_answers": [false, false, false, true],
+      "user_answers": [false, false, false, false]
+    },
+    {
+      "name": "Quel est l'âge de Sacha Ketchum dans la série Pokemon quand il commence son voyage ?",
+      "category" : "Anime & Manga Japonais",
+      "answers": ["9", "10", "11", "12"],
+      "correct_answers": [false, true, false, false],
+      "user_answers": [false, false, false, false]
+    },
+    {
+      "name": "Quel est le nom des parents de Batman ?",
+      "category" : "Comics",
+      "answers": ["Thomas & Martha", "Joey & Jackie", "Jason & Sarah", "Todd & Mira"],
+      "correct_answers": [false, true, false, false],
+      "user_answers": [false, false, false, false]
+    },
+    {
+      "name": "Combien de points la lettre 'Z' vaut-elle au Scrabble ?",
+      "category" : "Jeux de sociétés",
+      "answers": ["6", "9", "10", "15"],
+      "correct_answers": [false, false, true, false],
+      "user_answers": [false, false, false, false]
     }
 ]
