@@ -38,7 +38,7 @@
       "name": "Dans l'univers 'Jurassic Park', quel a été le premier dinosaure cloné par InGen en 1986 ?",
       "category" : "Cinéma",
       "answers": ["Triceratops", "Vélociraptor", "Troodon", "Brachiosaurus"],
-      "correct_answers": [false, false, true, false],
+      "correct_answers": [false, true, false, false],
       "user_answers": [false, false, false, false]
     },
     {
@@ -59,7 +59,7 @@
       "name": "Quel est le nom des parents de Batman ?",
       "category" : "Comics",
       "answers": ["Thomas & Martha", "Joey & Jackie", "Jason & Sarah", "Todd & Mira"],
-      "correct_answers": [false, true, false, false],
+      "correct_answers": [true, false, false, false],
       "user_answers": [false, false, false, false]
     },
     {
