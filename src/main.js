@@ -12,6 +12,12 @@ import VueCookies from 'vue-cookies'
 // Ajout de PouchDB au projet 07/11/2019
 import PouchDB from 'pouchdb'
 // Ajout des cookies dans VueJS 10/11/2019
+
+// Ajout d'un slider pour séléctionner le nombre de question 13/11/2019
+import 'vue-range-component/dist/vue-range-slider.css'
+import VueRangeSlider from 'vue-range-component'
+Vue.use(VueRangeSlider)
+
 Vue.use(VueCookies)
 // set default config
 // VueCookies.config('7d')

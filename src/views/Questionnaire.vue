@@ -33,13 +33,13 @@ export default {
   methods: {
     // fonction qui permet de passer à la question suivante en incrémentant l'index 15/10/2019
     nextQuestion: function () {
-      var length = Object.keys(this.JPQuestions).length
+      var length = this.$route.query.JPnbrquestion
       if (this.index < length - 1) {
         this.index++
       } else {
         console.log('Vous avez ' + this.JPpointsTotal + ' point(s)')
         // Redirige vers la page de résultat à la fin du questionnaire 05/11/2019
-        this.$router.push({ name: 'result', query: { JPTotal: this.JPpointsTotal, JPnbrquestion: length } })
+        this.$router.push({ name: 'result', query: { JPTotal: this.JPpointsTotal, JPnbrquestion: this.$route.query.JPnbrquestion } })
       }
     },
     // fonction récupère les réponses saisies par l'utilisateur 15/10/2019
@@ -70,12 +70,15 @@ export default {
         array[ counter ] = array[ index ]
         array[ index ] = temp
       }
+      console.log('Le tableau à bien été mélangé')
       return array
     }
   },
   beforeMount () {
-    // mélange le tableau des questions avant son affichage 12/11/2019
-    this.shuffleArray(this.JPQuestions)
+    // mélange le tableau des questions avant son affichage si l'utilisateur à choisi un nombre de question aléatoire 12/11/2019
+    if (this.$route.query.JPrandom === true) {
+      this.shuffleArray(this.JPQuestions)
+    }
   }
 }
 </script>

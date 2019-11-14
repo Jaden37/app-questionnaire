@@ -4,6 +4,7 @@ import Home from './views/Home.vue'
 // import de ma view 14/10/2019
 import Questionnaire from './views/Questionnaire.vue'
 import Result from './views/Result.vue'
+import Params from './views/Params.vue'
 
 Vue.use(Router)
 
@@ -33,6 +34,12 @@ export default new Router({
       path: '/result',
       name: 'result',
       component: Result
+    },
+    {
+      // définition de la route de ma view 13/11/2019
+      path: '/params',
+      name: 'params',
+      component: Params
     }
   ]
 })

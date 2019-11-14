@@ -5,7 +5,7 @@
       <div class="md-layout-item">
         <md-card>
           <md-card-header>
-            <div class="md-title">Questionnaire</div>
+            <div class="md-title">Informations personnelles</div>
           </md-card-header>
           <!-- Création du formulaire d'inscription de l'utilisateur 14/10/2019-->
           <md-card-content>
@@ -24,8 +24,8 @@
           </md-card-content>
 
           <md-card-actions>
-            <!-- bouton de redicrection vers le questionnaire 14/10/2019 -->
-            <router-link to="/questionnaire"><md-button v-on:click="addPerson" class="md-raised md-primary">Commencer le questionnaire</md-button></router-link>
+            <!-- bouton de redirection vers les paramètres du questionnaire 13/11/2019 -->
+            <router-link to="/params"><md-button v-on:click="addPerson" class="md-raised md-primary">Valider</md-button></router-link>
           </md-card-actions>
         </md-card>
       </div>
