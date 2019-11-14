@@ -24,7 +24,9 @@ export default {
     JPpointsTotal: 0,
     index: 0,
     // Création de la liste des questions 15/10/2019
-    JPQuestions: json
+    JPQuestions: json,
+    // Création d'un tableau contenant les questions répondues par l'utilisateur (pour conserver l'ordre et le nombre de question mis en paramètre) 14/11/2019
+    JPquestionRepondue: []
   }),
   // ajout de mon component dans la liste 14/10/2019
   components: {
@@ -39,7 +41,7 @@ export default {
       } else {
         console.log('Vous avez ' + this.JPpointsTotal + ' point(s)')
         // Redirige vers la page de résultat à la fin du questionnaire 05/11/2019
-        this.$router.push({ name: 'result', query: { JPTotal: this.JPpointsTotal, JPnbrquestion: this.$route.query.JPnbrquestion } })
+        this.$router.push({ name: 'result', query: { JPTotal: this.JPpointsTotal, JPnbrquestion: this.$route.query.JPnbrquestion, JPquestionRepondue: this.JPquestionRepondue } })
       }
     },
     // fonction récupère les réponses saisies par l'utilisateur 15/10/2019
@@ -55,6 +57,8 @@ export default {
         } else {
           console.log('False')
         }
+        // Ajout de la question complète au tableau
+        this.JPquestionRepondue[this.index] = this.JPQuestions[this.index]
         this.nextQuestion()
       }
     },
