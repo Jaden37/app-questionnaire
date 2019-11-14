@@ -41,7 +41,7 @@
             <md-table-cell md-label="Dernier Score">{{ item.doc.JPlastHighScore }}</md-table-cell>
             <md-table-cell md-label="Dernière partie jouée">{{ item.doc.JPlastPlayed }}</md-table-cell>
             <!-- bouton de suppression d'un utilisateur 10/11/2019 -->
-            <md-table-cell md-label="Modifier"><md-button v-on:click="editPerson(item.id)" class="md-raised md-primary"><md-icon>edit</md-icon></md-button></md-table-cell>
+            <md-table-cell md-label="Modifier"><md-button v-on:click="editPerson(item.id)" class="md-raised md-primary">+10 au Score</md-button></md-table-cell>
             <md-table-cell md-label="Supprimer"><md-button v-on:click="deletePerson(item.id)" class="md-raised md-accent"><md-icon>delete</md-icon></md-button></md-table-cell>
           </md-table-row>
         </md-table>
